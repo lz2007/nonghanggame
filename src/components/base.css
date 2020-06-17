@@ -1,0 +1,161 @@
+.cardOne {
+    background: url(../assets/card11.png) no-repeat;
+}
+
+.cardOne1 {
+    background: url(../assets/card11.png) no-repeat;
+}
+
+.cardOne2 {
+    background: url(../assets/card21.png) no-repeat;
+}
+
+.cardOne3 {
+    background: url(../assets/card31.png) no-repeat;
+}
+
+.cardTwo {
+    background: url(../assets/card12.png) no-repeat;
+}
+
+.cardTwo1 {
+    background: url(../assets/card12.png) no-repeat;
+}
+
+.cardTwo2 {
+    background: url(../assets/card22.png) no-repeat;
+}
+
+.cardTwo3 {
+    background: url(../assets/card32.png) no-repeat;
+}
+
+.cardOne,
+.cardTwo {
+    width: 345px;
+    height: 260px;
+    margin: auto;
+    background-size: contain;
+    position: relative;
+}
+
+.cardOne {
+    margin-top: 10px;
+}
+
+
+.point {
+    position: absolute;
+    border: 1px solid red;
+    opacity: 0;
+}
+
+.point11 {
+    left: 19px;
+    top: 73px;
+    width: 15px;
+    height: 15px;
+}
+
+.point12 {
+    right: 128px;
+    bottom: 125px;
+    width: 15px;
+    height: 15px;
+}
+
+.point13 {
+    right: 94px;
+    bottom: 29px;
+    width: 18px;
+    height: 18px;
+}
+
+.point21 {
+    left: 33px;
+    top: 68px;
+    width: 15px;
+    height: 15px;
+}
+
+.point22 {
+    left: 147px;
+    top: 46px;
+    width: 30px;
+    height: 25px;
+}
+
+.point23 {
+    right: 97px;
+    top: 62px;
+    width: 16px;
+    height: 16px;
+}
+
+.point24 {
+    right: 126px;
+    top: 110px;
+    width: 18px;
+    height: 18px;
+}
+
+.point25 {
+    right: 54px;
+    top: 108px;
+    width: 18px;
+    height: 18px;
+}
+
+.point31 {
+    left: 4px;
+    top: 4px;
+    width: 84px;
+    height: 42px;
+}
+
+.point32 {
+    left: 84px;
+    bottom: 45px;
+    width: 23px;
+    height: 13px;
+}
+
+.point33 {
+    left: 168px;
+    bottom: 23px;
+    width: 15px;
+    height: 33px;
+    transform: rotate(-45deg);
+}
+
+.point34 {
+    left: 58px;
+    bottom: 63px;
+    width: 26px;
+    height: 21px;
+}
+
+.point35 {
+    right: 121px;
+    top: 77px;
+    width: 14px;
+    height: 16px;
+}
+
+.point36 {
+    right: 136px;
+    bottom: 64px;
+    width: 10px;
+    height: 10px;
+}
+
+.point37 {
+    right: 163px;
+    top: 24px;
+    width: 8px;
+    height: 8px;
+}
+
+.footer{
+    width: 346px;
+}

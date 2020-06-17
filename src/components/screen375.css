@@ -1,0 +1,129 @@
+@media screen and (min-width: 375px) and (max-width: 385px) {
+
+    .cardOne,
+    .cardTwo {
+        width: 320px;
+        height: 230px;
+        margin: auto;
+        background-size: contain;
+    }
+
+    .point11 {
+        left: 17px;
+        top: 66px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .point12 {
+        right: 118px;
+        bottom: 103px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .point13 {
+        right: 90px;
+        bottom: 18px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .point21 {
+        left: 29px;
+        top: 62px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .point22 {
+        left: 138px;
+        top: 42px;
+        width: 23px;
+        height: 25px;
+    }
+
+    .point23 {
+        right: 91px;
+        top: 58px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .point24 {
+        right: 116px;
+        top: 101px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .point25 {
+        right: 49px;
+        top: 98px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .point31 {
+        left: 4px;
+        top: 4px;
+        width: 79px;
+        height: 37px;
+    }
+
+    .point32 {
+        left: 78px;
+        bottom: 33px;
+        width: 21px;
+        height: 8px;
+    }
+
+    .point33 {
+        left: 158px;
+        bottom: 10px;
+        width: 11px;
+        height: 30px;
+        transform: rotate(-45deg);
+    }
+
+    .point34 {
+        left: 50px;
+        bottom: 44px;
+        width: 26px;
+        height: 21px;
+    }
+
+    .point35 {
+        right: 112px;
+        top: 71px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .point36 {
+        right: 128px;
+        bottom: 50px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .point37 {
+        right: 150px;
+        top: 21px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .footer {
+        width: 320px !important;
+        bottom: -10px !important;
+    }
+
+    .cardOne {
+        margin-top: 4px !important;
+    }
+
+    .count {
+        font-size: 31px !important;
+    }
+}

@@ -1,0 +1,141 @@
+@media screen and (min-width: 320px) and (max-width: 330px) {
+
+    .cardOne,
+    .cardTwo {
+        width: 270px;
+        height: 200px;
+        margin: auto;
+        background-size: contain;
+    }
+
+    .point11 {
+        left: 13px;
+        top: 54px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .point12 {
+        right: 99px;
+    bottom: 94px;
+    width: 12px;
+    height: 12px;
+    }
+
+    .point13 {
+        right: 75px;
+        bottom: 20px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .point21 {
+        left: 25px;
+        top: 53px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .point22 {
+        left: 115px;
+        top: 35px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .point23 {
+        right: 76px;
+        top: 48px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .point24 {
+        right: 97px;
+        top: 84px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .point25 {
+        right: 42px;
+        top: 84px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .point31 {
+        left: 3px;
+        top: 3px;
+        width: 66px;
+        height: 32px;
+    }
+
+    .point32 {
+        left: 64px;
+        bottom: 33px;
+        width: 21px;
+        height: 8px;
+    }
+
+    .point33 {
+        left: 131px;
+        bottom: 13px;
+        width: 11px;
+        height: 25px;
+        transform: rotate(-45deg);
+    }
+
+    .point34 {
+        left: 43px;
+    bottom: 44px;
+    width: 20px;
+    height: 16px;
+    }
+
+    .point35 {
+        right: 95px;
+        top: 60px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .point36 {
+        right: 107px;
+        bottom: 47px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .point37 {
+        right: 126px;
+        top: 18px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .footer {
+        width: 270px !important;
+        bottom: 4px !important;
+    }
+
+    .cardOne {
+        margin-top: 4px;
+    }
+
+    .count {
+        font-size: 26px !important;
+    }
+
+    .unit {
+        font-size: 26px !important;
+    }
+
+    .select{
+        background-size: 65% !important;
+    }
+
+    .diloa{
+        height: 230px !important;
+    }
+}
