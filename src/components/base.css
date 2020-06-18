@@ -46,13 +46,14 @@
 
 .point {
     position: absolute;
-    border: 1px solid red;
+    border: 2px solid red;
     opacity: 0;
+    border-radius: 68px;
 }
 
 .point11 {
-    left: 19px;
-    top: 73px;
+    left: 22px;
+    top: 57px;
     width: 15px;
     height: 15px;
 }
@@ -99,11 +100,17 @@
     height: 18px;
 }
 
-.point25 {
+.point244{
     right: 54px;
     top: 108px;
-    width: 18px;
-    height: 18px;
+}
+
+.point25 {
+    right: 72px;
+    top: 193px;
+    width: 14px;
+    height: 40px;
+    transform: rotate(45deg);
 }
 
 .point31 {

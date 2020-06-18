@@ -1,6 +1,7 @@
 <template>
   <div
     class="content"
+    :class="[bg=='bg'?'content0':'']"
     :style="{
       backgroundImage: `url(${require('../../assets/zhangyin/' + bg + '.jpg')})`,
     }"
@@ -16,7 +17,7 @@ export default {
     return {
       money: "",
       channl: "",
-      bg: "",
+      bg: "bg",
     };
   },
   methods: {
@@ -55,4 +56,20 @@ export default {
   overflow: hidden;
   position: relative;
 }
+
+.content0 {
+  position: relative;
+}
+
+.content0::after {
+  content: "";
+  position: absolute;
+  width: 96%;
+  height: 300px;
+  top: 40%;
+  left: 2%;
+  background: url(../../assets/1/0.png) no-repeat;
+  background-size: contain;
+}
+
 </style>

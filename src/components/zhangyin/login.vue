@@ -35,6 +35,42 @@
       <transition name="fade">
         <div class="mask" v-show="ifMask">
           <div class="diloa">
+            <div class="text">
+              <div class="text1">1.</div>
+              <div class="text2">
+                活动时间：2020年6月25日-6月26日，请在活动时间内进行领取，活动结束后不可进行领取，视为放弃领取该奖品。
+              </div>
+            </div>
+            <div class="text">
+              <div class="text1">2.</div>
+              <div class="text2">
+                活动奖品仅限湖南地区手机号码进行领奖，须输入手机号、验证码、进入掌银页面领取，须符合在微信参与活动的手机号码。
+              </div>
+            </div>
+            <div class="text">
+              <div class="text1">3.</div>
+              <div class="text2">
+                奖品设置：您将有机会获得以下奖品，5元话费券、爱奇艺视频会员月卡、腾讯视频会员月卡、50元京东E卡、500元京东E卡、1000元苏宁卡。
+              </div>
+            </div>
+            <div class="text">
+              <div class="text1">4.</div>
+              <div class="text2">
+                每个用户只有1次领取奖品机会。
+              </div>
+            </div>
+            <div class="text">
+              <div class="text1">5.</div>
+              <div class="text2">
+                活动奖品数量有限，先到先得；奖品派发完毕，则活动结束。
+              </div>
+            </div>
+            <div class="text">
+              <div class="text1">6.</div>
+              <div class="text2">
+                活动最终解释权归湖南农行所有。
+              </div>
+            </div>
             <div class="btn" @click="checkGuize">
               我知道了
             </div>
@@ -158,11 +194,28 @@ export default {
 
 .diloa {
   width: 100%;
-  height: 500px;
-  background: url(../../assets/ljt.png) no-repeat;
+  height: 490px;
+  background: url(../../assets/ljt2.png) no-repeat;
   background-size: 100% 100%;
   text-align: center;
   position: relative;
+}
+
+.text:first-child {
+  margin-top: 60px;
+}
+
+.text {
+  color: #6a6a6a;
+  font-size: 16px;
+  width: 270px;
+  word-break: break-all;
+  margin: auto;
+  line-height: 20px;
+  text-align: justify;
+  display: inline-grid;
+  grid-template-columns: 20px 240px;
+  grid-template-rows: auto auto;
 }
 
 .btn {
@@ -182,7 +235,7 @@ export default {
 
 .content {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
-  background: url(../../assets/bg.png) no-repeat;
+  background: url(../../assets/bg2.png) no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
@@ -233,7 +286,7 @@ export default {
   border: 1px solid transparent;
   outline: none;
   height: 52px;
-  line-height: 52px;
+  line-height: 46px;
   background: url(../../assets/code.png) no-repeat;
   background-size: 100% 100%;
   text-align: center;

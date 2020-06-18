@@ -52,6 +52,11 @@
             @click.once="pointClick"
           ></div>
           <div
+            class="point point24 point244"
+            data-index="3"
+            @click.once="pointClick"
+          ></div>
+          <div
             class="point point25"
             data-index="4"
             @click.once="pointClick"
@@ -131,6 +136,11 @@
           ></div>
           <div
             class="point point24"
+            data-index="3"
+            @click.once="pointClick"
+          ></div>
+          <div
+            class="point point24 point244"
             data-index="3"
             @click.once="pointClick"
           ></div>
@@ -341,7 +351,7 @@ export default {
           hour = "0" + hour;
         }
 
-        return sec + ":" + String(ms).substr(0, 2);
+        return sec + "." + String(ms).substr(0, 2);
       } else {
         //若否，就是已经到截止时间了
         return "00:00";
@@ -363,6 +373,7 @@ export default {
       }
 
       let hasClassName = this.selectNum.find((value) => value == className);
+      console.log(hasClassName);
 
       if (!hasClassName) {
         for (let index = 0; index < this.selectNum.length; index++) {
@@ -571,7 +582,7 @@ export default {
 
       if (wx) {
         wx.config({
-          debug: true, // 开启调试模式,调用的所有api的返回值会在客户端this.$toast出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端this.$toast出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
           appId: result.data.data.appId, // 必填，公众号的唯一标识
           timestamp: result.data.data.timestamp, // 必填，生成签名的时间戳
           nonceStr: result.data.data.nonceStr, // 必填，生成签名的随机串
@@ -582,9 +593,10 @@ export default {
         wx.ready(function() {
           //需在用户可能点击分享按钮前就先调用
           wx.updateAppMessageShareData({
-            title: "", // 分享标题
-            desc: "", // 分享描述
-            link: "", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            title: "快来找不同，好礼粽不停", // 分享标题
+            desc:
+              "视频会员卡、500元京东E卡、1000元苏宁卡等你来拿~头图画面：用龙舟的头", // 分享描述
+            link: window.location.origin, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
             imgUrl: "", // 分享图标
             success: function() {
               // 设置成功
@@ -777,13 +789,15 @@ export default {
   margin-left: 10px;
   margin-right: 0px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .count-down {
-  position: absolute;
-  transform: translate(40%, 10px);
   font-weight: 800;
   color: #ffb08a;
+  margin-bottom: 20px;
   /* background-image: -webkit-linear-gradient(92deg, #ffb08a, #fb641b);
   background-clip: text;
   -webkit-background-clip: text;

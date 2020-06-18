@@ -9,10 +9,10 @@
     }
 
     .point11 {
-        left: 13px;
-        top: 54px;
-        width: 15px;
-        height: 15px;
+        left: 17px;
+        top: 44px;
+        width: 13px;
+        height: 13px;
     }
 
     .point12 {
@@ -56,12 +56,17 @@
         width: 15px;
         height: 15px;
     }
-
-    .point25 {
+    .point244{
         right: 42px;
         top: 84px;
-        width: 15px;
-        height: 15px;
+    }
+
+    .point25 {
+        right: 57px;
+        top: 150px;
+        width: 10px;
+        height: 33px;
+        transform: rotate(45deg);
     }
 
     .point31 {

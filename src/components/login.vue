@@ -51,7 +51,7 @@ export default {
   methods: {
     async sendPhone() {
       if (!this.phone) {
-         this.$toast('请输入手机号码');
+        this.$toast("请输入手机号码");
         return;
       }
       if (!/^1[3456789]\d{9}$/.test(this.phone)) {
@@ -122,25 +122,14 @@ export default {
     },
   },
   mounted() {
-    // 获取微信用户昵称
-    // let code = this.$store.state.code || this.getUrlParam('code');
-    // if (code) {
-    //    axios
-    //     .get(`/devf/wx/setCode?code=${code}`)
-    //     .then(function(response) {
-    //       console.log(response);
-    //     })
-    //     .catch(function(error) {
-    //       console.log(error);
-    //     });
-    // } else {
-    //   const HREF = `
-    //   https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${
-    //     encodeURIComponent(window.location.href)
-    //   }&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect
-    //   `;
-    //   window.location.href = HREF;
-    // }
+    console.log(this.$store.state.token);
+    const token = this.$store.state.token;
+    // 已经登录过了
+    if (token) {
+      this.$router.replace({
+        path: "/guize",
+      });
+    }
   },
   destroyed() {
     clearTimeout(this.timer);
@@ -159,7 +148,7 @@ export default {
 
 .content {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
-  background: url(../assets/bg.png) no-repeat;
+  background: url(../assets/bg2.png) no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
@@ -212,7 +201,7 @@ export default {
   border: 1px solid transparent;
   outline: none;
   height: 52px;
-  line-height: 52px;
+  line-height: 46px;
   background: url(../assets/code.png) no-repeat;
   background-size: 100% 100%;
   text-align: center;

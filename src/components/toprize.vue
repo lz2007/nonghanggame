@@ -1,6 +1,7 @@
 <template>
   <div
     class="content"
+    :class="[bg=='bg'?'content0':'']"
     :style="{
       backgroundImage: `url(${require('../assets/1/' + bg + '.jpg')})`,
     }"
@@ -15,7 +16,7 @@ export default {
       money: "",
       channl: "",
       valid: "",
-      bg: "",
+      bg: "bg",
     };
   },
   methods: {},
@@ -23,7 +24,7 @@ export default {
     console.log(this.$route.query.money);
     console.log(this.$route.query.channl);
     this.valid = this.$route.query.valid;
-    console.log
+    console.log;
     if (this.valid) {
       this.money = this.$route.query.money;
       this.channl = this.$route.query.channl;
@@ -34,7 +35,7 @@ export default {
         this.bg = String(this.channl);
       }
     } else {
-      this.bg = "0";
+      this.bg = "bg";
     }
   },
 };
@@ -42,11 +43,25 @@ export default {
 
 <style scoped>
 .content {
-  background: url(../assets/1/0.jpg) no-repeat;
+  background: url(../assets/1/bg.jpg) no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
+}
+
+.content0 {
+  position: relative;
+}
+.content0::after {
+  content: "";
+  position: absolute;
+  width: 96%;
+  height: 300px;
+  top: 40%;
+  left: 2%;
+  background: url(/img/0.png) no-repeat;
+  background-size: contain;
 }
 </style>

@@ -1,32 +1,34 @@
 import axios from "axios";
 import router from '../../router';
 let instance = axios.create();
+import { Toast } from 'vant';
 
 // http response 拦截器
 instance.interceptors.response.use(
   (response) => {
     //拦截响应，做统一处理
     if (response.data.code) {
-      console.log(response.data);
+      console.log(response);
       
       switch (response.data.code) {
         case '0101':
-          router.replace({
-            path: "/login"
-          });
+          // router.replace({
+          //   path: "/login"
+          // });
       }
     }
     return response;
   },
   //接口错误状态处理，也就是说无响应时的处理
   (error) => {
+    Toast('错误码:'+error.response.status);
     return Promise.reject(error.response.status); // 返回接口返回的错误信息
   }
 );
 
 // 发送验证码
 export function send(phone) {
-  const url = "/abc/sms/send/";
+  const url = "/api/abc/sms/send/";
 
   return axios.post(url, {
     phone,
@@ -35,7 +37,7 @@ export function send(phone) {
 
 // 校验验证码 参数phone，validateCode
 export function check(phone, validateCode) {
-  const url = "/abc/sms/check/";
+  const url = "/api/abc/sms/check/";
 
   return axios.post(url, {
     phone,
@@ -43,10 +45,10 @@ export function check(phone, validateCode) {
   });
 }
 
-// 抽奖接口 /abc/business/prize/draw
+// 抽奖接口 /api/abc/business/prize/draw
 
 export function draw(grade, JWT_TOKEN) {
-  const url = "/abc/business/prize/draw";
+  const url = "/api/abc/business/prize/draw";
   const config = {
     headers: {
       JWT_TOKEN,
@@ -68,7 +70,7 @@ export function draw(grade, JWT_TOKEN) {
 //   data.todayPlayedNumber (当日已玩次数)
 
 export function userCheck(JWT_TOKEN) {
-  const url = "/abc/business/user/check";
+  const url = "/api/abc/business/user/check";
   const config = {
     headers: {
       JWT_TOKEN,
@@ -81,7 +83,7 @@ export function userCheck(JWT_TOKEN) {
 // url: /business/user/played
 // 不需关注返回结果
 export function played(JWT_TOKEN) {
-  const url = "/abc/business/user/played";
+  const url = "/api/abc/business/user/played";
   const config = {
     headers: {
       JWT_TOKEN,
@@ -101,7 +103,7 @@ export function played(JWT_TOKEN) {
 //  appId
 
 export function sign(JWT_TOKEN) {
-  const url = "/abc/wechat/sign";
+  const url = "/api/abc/wechat/sign";
   const config = {
     headers: {
       JWT_TOKEN,
@@ -115,7 +117,7 @@ export function sign(JWT_TOKEN) {
 // 不需关注返回结果
 
 export function shared(JWT_TOKEN) {
-  const url = "/abc/business/user/shared";
+  const url = "/api/abc/business/user/shared";
   const config = {
     headers: {
       JWT_TOKEN,
@@ -127,7 +129,7 @@ export function shared(JWT_TOKEN) {
 
 // 兑奖接口
 export function cash(JWT_TOKEN) {
-  const url = "/abc/exchange/cash ";
+  const url = "/api/abc/exchange/cash ";
   const config = {
     headers: {
       JWT_TOKEN,
