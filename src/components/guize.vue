@@ -111,7 +111,7 @@ export default {
     word-break: break-all;
     margin: auto;
     line-height: 16px;
-    /* font-weight: bold; */
+    font-weight: bold;
     text-align: justify;
     display: inline-grid;
     grid-template-columns: 20px 270px;
