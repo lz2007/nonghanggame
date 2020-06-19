@@ -280,7 +280,7 @@ export default {
   name: "game",
   data() {
     return {
-      gameTime: "15:00", // 游戏时间
+      gameTime: "15.00", // 游戏时间
       gameLevel: 1, // 游戏关卡
       selectNum: ["", "", ""], //底部list
       showTits: true, // 开始提示
@@ -360,13 +360,13 @@ export default {
         return sec + "." + String(ms).substr(0, 2);
       } else {
         //若否，就是已经到截止时间了
-        return "00:00";
+        return "00.00";
       }
     },
     // 游戏点击
     pointClick(e) {
       // 时间耗尽
-      if (this.gameTime == "00:00") {
+      if (this.gameTime == "00.00") {
         return;
       }
 
@@ -439,13 +439,13 @@ export default {
     // 设置开始时间
     setTime() {
       if (this.gameLevel == 1) {
-        this.gameTime = "15:00";
+        this.gameTime = "15.00";
       }
       if (this.gameLevel == 2) {
-        this.gameTime = "30:00";
+        this.gameTime = "30.00";
       }
       if (this.gameLevel == 3) {
-        this.gameTime = "45:00";
+        this.gameTime = "45.00";
       }
     },
     // 计算分数
@@ -508,7 +508,7 @@ export default {
         this.interval = setInterval(() => {
           TimeStamp = TimeStamp - 0.001;
           this.gameTime = this.changeTimeStamp(TimeStamp);
-          if (this.changeTimeStamp(TimeStamp) == "00:00") {
+          if (this.changeTimeStamp(TimeStamp) == "00.00") {
             clearInterval(this.interval);
             console.log("倒计时用完");
             this.showFailTits = true;

@@ -85,7 +85,7 @@ export default {
   background: url(../assets/guizeBg.png) no-repeat;
   background-size: 100% 100%;
   width: 100%;
-  height: 435px;
+  height: 382px;
   bottom: 85px;
   position: absolute;
 }
@@ -105,21 +105,21 @@ export default {
 }
 
 .text {
-  color: #5daea5;
-  font-size: 15px;
-  width: 270px;
-  word-break: break-all;
-  margin: auto;
-  line-height: 18px;
-  font-weight: bold;
-  text-align: justify;
-  display: inline-grid;
-  grid-template-columns: 20px 250px;
-  grid-template-rows: auto auto;
+     color: #5daea5;
+    font-size: 14px;
+    width: 290px;
+    word-break: break-all;
+    margin: auto;
+    line-height: 16px;
+    /* font-weight: bold; */
+    text-align: justify;
+    display: inline-grid;
+    grid-template-columns: 20px 270px;
+    grid-template-rows: auto auto;
 }
 
-.text-box{
-  width: 280px;
+.text-box {
+  width: 290px;
   margin: auto;
 }
 
