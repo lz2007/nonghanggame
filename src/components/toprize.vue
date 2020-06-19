@@ -61,7 +61,7 @@ export default {
   height: 300px;
   top: 40%;
   left: 2%;
-  background: url(/img/0.png) no-repeat;
+  background: url(../assets/1/0.png) no-repeat;
   background-size: contain;
 }
 </style>

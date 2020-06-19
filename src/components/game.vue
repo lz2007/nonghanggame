@@ -1,7 +1,7 @@
 <template>
   <div class="game">
     <div class="head">
-      <div class="tuichu"></div>
+      <div class="tuichu" @click="tuichu"></div>
       <div class="time">
         <div class="count-down">
           <span class="count">{{ gameTime }}</span>
@@ -327,6 +327,12 @@ export default {
     },
   },
   methods: {
+    // 推出
+    tuichu() {
+      this.$router.replace({
+        path: "/login",
+      });
+    },
     //倒计时
     changeTimeStamp(timeStamp) {
       var distancetime =

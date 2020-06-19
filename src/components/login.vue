@@ -35,7 +35,7 @@
 
 <script>
 import { code } from "../common/js/common";
-import { send, check } from "../common/js/api";
+import { send, check,userCheck } from "../common/js/api";
 
 export default {
   name: "login",
@@ -88,10 +88,12 @@ export default {
         this.$toast("请输入手机号码");
         return;
       }
+
       if (!/^1[3456789]\d{9}$/.test(this.phone)) {
         this.$toast("手机号码有误，请重填");
         return false;
       }
+
       if (!this.validateCode) {
         this.$toast("请输入验证码");
         return;

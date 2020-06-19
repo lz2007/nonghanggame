@@ -1,7 +1,9 @@
 import axios from "axios";
-import router from '../../router';
+import router from "../../router";
+import store from "../../store";
 let instance = axios.create();
-import { Toast } from 'vant';
+import { Toast } from "vant";
+console.log(store);
 
 // http response 拦截器
 instance.interceptors.response.use(
@@ -9,19 +11,21 @@ instance.interceptors.response.use(
     //拦截响应，做统一处理
     if (response.data.code) {
       console.log(response);
-      
+
       switch (response.data.code) {
-        case '0101':
-          // router.replace({
-          //   path: "/login"
-          // });
+        case "0101":
+        case "0100":
+          store.commit("setToken", "");
+          router.replace({
+            path: "/login",
+          });
       }
     }
     return response;
   },
   //接口错误状态处理，也就是说无响应时的处理
   (error) => {
-    Toast('错误码:'+error.response.status);
+    Toast("错误码:" + error.response.status);
     return Promise.reject(error.response.status); // 返回接口返回的错误信息
   }
 );
@@ -125,7 +129,6 @@ export function shared(JWT_TOKEN) {
   };
   return instance.post(url, {}, config);
 }
-
 
 // 兑奖接口
 export function cash(JWT_TOKEN) {
