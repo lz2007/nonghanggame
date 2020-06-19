@@ -81,13 +81,14 @@ export default {
 }
 
 .guize {
-  content: "";
-  background: url(../assets/guizeBg.png) no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 382px;
-  bottom: 85px;
-  position: absolute;
+    content: "";
+    background: url(/img/guizeBg.013b6065.png) no-repeat;
+    background-size: 100% 100%;
+    width: 96%;
+    height: 340px;
+    left: 2%;
+    bottom: 85px;
+    position: absolute;
 }
 
 .tit {
@@ -97,29 +98,29 @@ export default {
   font-weight: bold;
   border-radius: 5px;
   text-align: center;
-  width: 250px;
+  width: 256px;
   line-height: 25px;
   margin: auto;
-  margin-top: 50px;
-  margin-bottom: 15px;
+  margin-top: 38px;
+  margin-bottom: 10px;
 }
 
 .text {
      color: #5daea5;
     font-size: 14px;
-    width: 290px;
+    width: 300px;
     word-break: break-all;
     margin: auto;
     line-height: 16px;
     font-weight: bold;
     text-align: justify;
     display: inline-grid;
-    grid-template-columns: 20px 270px;
+    grid-template-columns: 20px 280px;
     grid-template-rows: auto auto;
 }
 
 .text-box {
-  width: 290px;
+  width: 300px;
   margin: auto;
 }
 
