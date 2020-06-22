@@ -83,7 +83,7 @@
 
 <script>
 import { code } from "../../common/js/common";
-import { send, check } from "../../common/js/api";
+import { send, check, getUserInfo } from "../../common/js/api";
 export default {
   name: "login",
   data() {
@@ -93,10 +93,16 @@ export default {
       validateCode: "",
       codeStatus: "获取验证码",
       ifMask: false,
+      isZhangyinApp: false,
     };
   },
   methods: {
     async sendPhone() {
+      if (this.isZhangyinApp) {
+        this.alertTits();
+        return false;
+      }
+
       if (!/^1[3456789]\d{9}$/.test(this.phone)) {
         this.$toast("手机号码有误，请重填");
         return false;
@@ -131,6 +137,11 @@ export default {
     },
 
     start() {
+      if (this.isZhangyinApp) {
+        this.alertTits();
+        return false;
+      }
+
       if (!/^1[3456789]\d{9}$/.test(this.phone)) {
         this.$toast("手机号码有误，请重填");
         return false;
@@ -159,15 +170,34 @@ export default {
         }
       });
     },
-
+    alertTits() {
+      this.$toast("请在掌银APP领奖");
+    },
     checkGuize() {
       this.ifMask = !this.ifMask;
     },
-    destroyed() {
-      clearTimeout(this.timer);
-    },
   },
-  mounted() {},
+  mounted() {
+    const token = this.$route.query.token;
+
+    console.log(this.$route.query);
+    if (token) {
+      getUserInfo(token)
+        .then((result) => {
+          console.log(result);
+          if (result.data.code != code) {
+            this.isZhangyinApp = true;
+            this.alertTits();
+          }
+        })
+        .catch(() => {
+          this.$toast("err");
+        });
+    }
+  },
+  destroyed() {
+    clearTimeout(this.timer);
+  },
 };
 </script>
 
@@ -291,6 +321,7 @@ export default {
   background-size: 100% 100%;
   text-align: center;
   color: #fff;
+  padding: 0;
 }
 
 .start {

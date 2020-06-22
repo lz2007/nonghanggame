@@ -140,3 +140,11 @@ export function cash(JWT_TOKEN) {
   };
   return instance.post(url, {}, config);
 }
+
+// 获取农行用户唯一标识openid接口
+export function getUserInfo(token) {
+  const url = "/where/abc-authority/api/getUserInfo";
+
+  return axios.post(url, {token});
+}
+

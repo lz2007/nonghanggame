@@ -52,14 +52,12 @@ export default {
   },
   methods: {
     start() {
-      this.$router.push({
+      this.$router.replace({
         path: "/game",
       });
     },
   },
-  mounted() {
-    
-  },
+  mounted() {},
 };
 </script>
 

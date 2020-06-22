@@ -122,7 +122,7 @@
 
     .footer {
         width: 320px !important;
-        bottom: 0px !important;
+        bottom: -5px !important;
     }
 
     .cardOne {

@@ -75,7 +75,7 @@ export default {
         this.countdown = 60;
       } else {
         this.$refs.getCode.setAttribute("disabled", true);
-        this.codeStatus = "重新发送(" + this.countdown + ")";
+        this.codeStatus = `重新发送(${this.countdown})`;
         this.countdown--;
         this.timer = setTimeout(() => {
           this.settime();
@@ -208,6 +208,7 @@ export default {
   background-size: 100% 100%;
   text-align: center;
   color: #fff;
+  padding: 0;
 }
 
 .start {

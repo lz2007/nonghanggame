@@ -522,7 +522,7 @@ export default {
       console.log(data);
 
       if (data.data.code == code) {
-        this.$router.push({
+        this.$router.replace({
           path: "/toprize",
           query: {
             money: data.data.data.money,
