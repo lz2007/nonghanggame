@@ -194,7 +194,7 @@ export default {
 
 .diloa {
   width: 100%;
-  height: 490px;
+  height: 490px !important;
   background: url(../../assets/ljt2.png) no-repeat;
   background-size: 100% 100%;
   text-align: center;
@@ -244,9 +244,9 @@ export default {
 }
 
 .login {
-  width: 70%;
+  width: 80%;
   margin: auto;
-  left: 16%;
+  left: 10%;
   bottom: 8%;
   position: absolute;
 }
@@ -273,11 +273,11 @@ export default {
 }
 
 .v-code {
-  flex-basis: 60%;
+  flex-basis: 56%;
 }
 
 .v-code2 {
-  flex-basis: 46%;
+  flex-basis: 40%;
   margin-left: 4%;
 }
 

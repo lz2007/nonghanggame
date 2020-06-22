@@ -773,7 +773,7 @@ export default {
 .head {
   position: relative;
   width: 100%;
-  height: 100px;
+  height: 70px;
   background: url(../assets/head.png) no-repeat;
   background-size: 100% 100%;
   display: flex;
@@ -783,15 +783,15 @@ export default {
   flex: 1;
   background: url(../assets/tuichu.png) no-repeat;
   background-size: contain;
-  margin-top: 22px;
+  margin-top: 14px;
   margin-left: 10px;
 }
 
 .time {
   flex: 3;
   background: url(../assets/time.png) no-repeat;
-  background-size: contain;
-  margin-top: 18px;
+  background-size: 100% 100%;
+  margin-top: 8px;
   margin-left: 10px;
   margin-right: 0px;
   position: relative;
@@ -803,7 +803,7 @@ export default {
 .count-down {
   font-weight: 800;
   color: #ffb08a;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   /* background-image: -webkit-linear-gradient(92deg, #ffb08a, #fb641b);
   background-clip: text;
   -webkit-background-clip: text;
@@ -822,7 +822,7 @@ export default {
   background: url(../assets/diyiguan.png) no-repeat;
   flex: 1;
   background-size: contain;
-  margin-top: 22px;
+  margin-top: 14px;
   margin-right: 10px;
 }
 

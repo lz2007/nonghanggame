@@ -1,10 +1,10 @@
 <template>
   <div class="content">
     <div class="guize">
-      <div class="tit">
+      <!-- <div class="tit">
         活动时间：2020年6月25日-6月26日
-      </div>
-      <div class="text-box">
+      </div> -->
+      <!-- <div class="text-box">
         <div class="text">
           <div>1.</div>
           <div>
@@ -37,7 +37,7 @@
             奖品设置：您将有机会获得以下奖品，5元话费券、爱奇艺视频会员月卡、腾讯视频会员月卡、50元京东E卡、500元京东E卡、1000元苏宁卡。
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="login">
       <div class="start" @click="start"></div>
@@ -57,7 +57,9 @@ export default {
       });
     },
   },
-  mounted() {},
+  mounted() {
+    
+  },
 };
 </script>
 
@@ -81,15 +83,33 @@ export default {
 }
 
 .guize {
-    content: "";
-    background: url(/img/guizeBg.013b6065.png) no-repeat;
-    background-size: 100% 100%;
-    width: 96%;
-    height: 340px;
-    left: 2%;
-    bottom: 85px;
-    position: absolute;
+  content: "";
+  background: url(../assets/guize.png) no-repeat;
+  background-size: 100% 100%;
+  width: 96%;
+  height: 340px;
+  left: 2%;
+  bottom: 85px;
+  position: absolute;
 }
+
+@media screen and (min-width: 414px) and (max-width: 424px) {
+  .guize {
+    height: 300px;
+    width: 92%;
+    left: 4%;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 380px) {
+  /*兼容iphoneX*/
+  .guize {
+    height: 370px;
+    width: 98%;
+    left: 1%;
+  }
+}
+
 
 .tit {
   background: #ff8043;
@@ -106,17 +126,17 @@ export default {
 }
 
 .text {
-     color: #5daea5;
-    font-size: 14px;
-    width: 300px;
-    word-break: break-all;
-    margin: auto;
-    line-height: 16px;
-    font-weight: bold;
-    text-align: justify;
-    display: inline-grid;
-    grid-template-columns: 20px 280px;
-    grid-template-rows: auto auto;
+  color: #5daea5;
+  font-size: 14px;
+  width: 300px;
+  word-break: break-all;
+  margin: auto;
+  line-height: 16px;
+  font-weight: bold;
+  text-align: justify;
+  display: inline-grid;
+  grid-template-columns: 20px 280px;
+  grid-template-rows: auto auto;
 }
 
 .text-box {

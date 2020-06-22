@@ -159,9 +159,9 @@ export default {
 }
 
 .login {
-  width: 70%;
+  width: 80%;
   margin: auto;
-  left: 16%;
+  left: 10%;
   bottom: 8%;
   position: absolute;
   /* transform: translateY(155%); */
@@ -190,11 +190,11 @@ export default {
 }
 
 .v-code {
-  flex-basis: 60%;
+  flex-basis: 56%;
 }
 
 .v-code2 {
-  flex-basis: 46%;
+  flex-basis: 40%;
   margin-left: 4%;
 }
 
